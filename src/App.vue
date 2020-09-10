@@ -1,32 +1,41 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" :style="{ 'height': minHeight}">
     <router-view/>
   </div>
 </template>
 
-<style lang="less">
+<script>
+import _ from 'lodash'
+
+export default {
+  name: 'App',
+  data () {
+    return {
+      minHeight: document.documentElement.clientHeight + 'px'
+    }
+  },
+  mounted () {
+    window.onresize = _.debounce(() => {
+      this.minHeight = document.documentElement.clientHeight + 'px'
+    }, 500)
+  }
+}
+</script>
+
+<style lang="less" scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: alibaba, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #666666;
+  background-color: #fbfbfb;
+  min-height: 100vh;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+@media screen and (min-width: 576px) {
+  #app {
+    max-width: 576px;
+    max-height: 100vh;
+    margin: 0 auto
   }
 }
 </style>
