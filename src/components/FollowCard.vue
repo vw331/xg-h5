@@ -2,7 +2,7 @@
   <div class="follow-card-wrap">
     <div class="follow-card">
       <p class="font-bold">{{info.name}}</p>
-      <button>+ 关注</button>
+      <button @click="handleFollowClick">+ 关注</button>
     </div>
     <p class="text-xs text-describe" v-html="info.describe"></p>
   </div>
@@ -19,6 +19,11 @@ export default {
   },
   data () {
     return { }
+  },
+  methods: {
+    handleFollowClick () {
+      this.$emit('onFollow', this.info)
+    }
   }
 }
 </script>

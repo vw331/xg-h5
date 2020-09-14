@@ -10,9 +10,9 @@
           <div class="recommend-title"> 适合你的投资资讯 </div>
         </div>
         <div class="flex flex-row justify-between mt-4">
-          <follow-card :info="result.recommend[0]"></follow-card>
-          <follow-card :info="result.recommend[1]"></follow-card>
-          <follow-card :info="result.recommend[2]"></follow-card>
+          <follow-card :info="result.recommend[0]" @onFollow="onFollow"></follow-card>
+          <follow-card :info="result.recommend[1]" @onFollow="onFollow"></follow-card>
+          <follow-card :info="result.recommend[2]" @onFollow="onFollow"></follow-card>
         </div>
       </div>
       <button class="btn-follow mb-6">一键关注 <span class="icon-touch"></span></button>
@@ -79,6 +79,13 @@ export default {
   methods: {
     share (e) {
       alert('分享')
+    },
+    onFollow (item) {
+      console.log(item)
+      this.$http.post('http://47.114.163.46:4000/api/test', { name: item.name })
+        .then(res => {
+          alert('关注成功')
+        })
     }
   },
   computed: {

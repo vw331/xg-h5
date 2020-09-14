@@ -5,7 +5,7 @@ import asiox from 'axios'
 import './style/tailwind.css'
 import './style/index.less'
 
-Vue.prototype.$https = asiox.create({
+Vue.prototype.$http = asiox.create({
   baseURL: process.env.VUE_APP_BASEAPI || '',
   timeout: 1000 * 12
 })
