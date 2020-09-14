@@ -13,7 +13,7 @@
           :name="question.id"
           v-model="selected"
           :value="item.value"/>
-        <p>{{item.name}}</p>
+        <p v-html="item.name"></p>
       </label>
     </fieldset>
   </div>

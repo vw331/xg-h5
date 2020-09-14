@@ -1,7 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/cyc/'
-    : '/',
+  publicPath: process.env.VUE_APP_PUBLICPATH,
   devServer: {
     disableHostCheck: true
   }

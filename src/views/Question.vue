@@ -1,6 +1,6 @@
 <template>
   <div id="question" class="container">
-    <form @submit.prevent="onSubmit">
+    <form @submit.prevent="onSubmit" v-cloak>
       <h3 class="mb-4 font-bold">第{{showItem+1}}/{{questions.length}}题</h3>
       <section class="question-wrap">
         <transition-group name="slide-fade">
