@@ -1,6 +1,6 @@
 <template>
   <div class="question-item">
-    <h4 class="text-md font-bold">{{index}}、{{question.title}}</h4>
+    <h4 class="text-md font-bold">{{index}}、{{question.title}}</h4><i class="invisible">hidden</i>
     <div class="banner-wrap">
       <img :src="question.banner" alt="">
     </div>
@@ -28,6 +28,8 @@ export default {
     index: Number,
     question: { type: Object, required: true },
     onSelect: { type: Function }
+  },
+  created () {
   },
   data () {
     return {

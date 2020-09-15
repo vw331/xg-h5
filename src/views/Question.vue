@@ -28,7 +28,11 @@
 </template>
 
 <script>
+
+import Vue from 'vue'
+import { Toast } from 'vant'
 import QuestionItem from '@/components/QuestionItem'
+Vue.use(Toast)
 
 const questions = [
   {
@@ -81,7 +85,7 @@ export default {
       if (Object.keys(this.selected).length > this.showItem) {
         this.showItem = this.showItem + 1
       } else {
-        alert('任选一项后进入下一题!')
+        Toast('请选择一项再进入下一题')
       }
     },
     onSelected (select) {
@@ -89,7 +93,7 @@ export default {
     },
     onSubmit () {
       const score = Object.values(this.selected).reduce((total, next) => total + parseInt(next.split('-')[1]), 0)
-      alert(`当前得分: ${score}`)
+
       this.$router.replace({
         name: 'Result',
         params: { score }
@@ -131,6 +135,7 @@ export default {
     padding: 6px 28px;
     border-radius: 30px;
     color: #ffffff;
+    outline: none;
     background-image: repeating-linear-gradient(#f3b96c, #c33326)
   }
   .slide-fade-enter {

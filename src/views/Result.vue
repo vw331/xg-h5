@@ -20,7 +20,6 @@
         <button class="btn-normal ml-4" @click="() => { this.$router.replace('/question') }">再测一次</button>
         <button class="btn-normal btn-red mr-4" @click="share">喊好友测试</button>
       </div>
-      <h3 class="text-blue mb-1">长按或者截屏保存</h3>
       <p class="text-blue text-xs">市场有风险  投资需谨慎</p>
     </div>
   </div>
@@ -204,6 +203,7 @@ export default {
     font-size: 24px;
     font-family: alibaba-heavy;
     font-weight: 700;
+    outline: none;
     color: #ffffff;
     border-radius: 22.5px;
     background-image: repeating-linear-gradient(#f67575, #e34343);
@@ -215,6 +215,7 @@ export default {
     line-height: 30px;
     font-size: 12px;
     border-radius: 5px;
+    outline: none;
     color: #ffffff;
     background-image: repeating-linear-gradient(#608cf6, #2d55e2);
   }

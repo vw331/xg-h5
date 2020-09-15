@@ -13,6 +13,7 @@
     "lodash": "^4.17.20",
     "tailwind": "^4.0.0",
     "tailwindcss": "^1.8.5",
+    "vant": "^2.10.6",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
@@ -23,6 +24,7 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.0",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
@@ -34,6 +36,9 @@
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
+    "globals": {
+      "vant": true
+    },
     "root": true,
     "env": {
       "node": true
