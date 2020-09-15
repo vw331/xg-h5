@@ -1,6 +1,6 @@
 <template>
   <div class="question-item">
-    <h4 class="text-md font-bold">{{index}}、{{question.title}}</h4><i class="invisible">hidden</i>
+    <h4 class="text-md font-bold">{{index}}、{{question.title}}</h4>
     <div class="banner-wrap">
       <img :src="question.banner" alt="">
     </div>
@@ -48,7 +48,8 @@ export default {
 <style lang="less" scoped>
   .question-item {
     text-align: left;
-    font-family: alibaba-bold;
+    font-weight: 900;
+    //font-family: alibaba-bold;
     padding: 20px
   }
   .banner-wrap {
@@ -66,7 +67,8 @@ export default {
   }
   .field-group {
     display: flex;
-    font-family: alibaba-bold;
+    font-weight: 900;
+    //font-family: alibaba-bold;
     flex-direction: row;
     padding: 6px 0;
     & > input[type=radio] {

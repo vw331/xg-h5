@@ -201,11 +201,13 @@ export default {
     width: 200px;
     line-height: 45px;
     font-size: 24px;
-    font-family: alibaba-heavy;
+    //font-family: alibaba-heavy;
     font-weight: 700;
     outline: none;
     color: #ffffff;
     border-radius: 22.5px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
     background-image: repeating-linear-gradient(#f67575, #e34343);
     box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, .3);
   }
@@ -217,6 +219,8 @@ export default {
     border-radius: 5px;
     outline: none;
     color: #ffffff;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
     background-image: repeating-linear-gradient(#608cf6, #2d55e2);
   }
   .btn-red {

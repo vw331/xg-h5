@@ -47,12 +47,14 @@ export default {
     .btn-entry {
       animation: animat .6s infinite;
       display: inline-block;
-      font-family: alibaba-heavy;
+      //font-family: alibaba-heavy;
       font-size: 18px;
       line-height: 30px;
       font-weight: 700;
       padding: 6px 48px;
       border-radius: 30px;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: transparent;
       background-color: #e43641
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <div id="question" class="container">
     <form @submit.prevent="onSubmit" v-cloak>
-      <h3 class="mb-4 font-bold">第{{showItem+1}}/{{questions.length}}题</h3>
+      <h3 class="mb-4 font-bold">第{{showItem+1}}/{{questions.length}}题<i class="invisible">hidden</i></h3>
       <section class="question-wrap">
         <transition-group name="slide-fade">
           <question-item
@@ -85,7 +85,10 @@ export default {
       if (Object.keys(this.selected).length > this.showItem) {
         this.showItem = this.showItem + 1
       } else {
-        Toast('请选择一项再进入下一题')
+        Toast({
+          position: 'top',
+          message: '请先选择答案!'
+        })
       }
     },
     onSelected (select) {
@@ -128,7 +131,8 @@ export default {
   }
   .btn-toggle, .btn-submit {
     display: inline-block;
-    font-family: alibaba-heavy;
+    //font-family: alibaba-heavy;
+    font-weight: 900;
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
@@ -136,7 +140,9 @@ export default {
     border-radius: 30px;
     color: #ffffff;
     outline: none;
-    background-image: repeating-linear-gradient(#f3b96c, #c33326)
+    background-image: repeating-linear-gradient(#f3b96c, #c33326);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
   }
   .slide-fade-enter {
       transform: translateX(10px);

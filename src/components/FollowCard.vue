@@ -44,7 +44,7 @@ export default {
     background-size: contain;
     p {
       color: #c53a2a;
-      font-family: alibaba-bold;
+      //font-family: alibaba-bold;
       font-size: 14px;
       line-height: 1.75;
       font-weight: 600;
@@ -57,6 +57,8 @@ export default {
       border-radius: 4px;
       font-weight: 700;
       color: #ffffff;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: transparent;
       background-image: repeating-linear-gradient(#f3b96c, #c33326)
     }
   }
