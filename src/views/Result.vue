@@ -210,6 +210,11 @@ export default {
     -webkit-tap-highlight-color: transparent;
     background-image: repeating-linear-gradient(#f67575, #e34343);
     box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, .3);
+
+    &:active {
+      background-image: repeating-linear-gradient(#cf5959, #af3131);
+      transform: translateY(1px)
+    }
   }
   .btn-normal {
     display: inline-block;
@@ -222,6 +227,10 @@ export default {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
     background-image: repeating-linear-gradient(#608cf6, #2d55e2);
+
+    &:active {
+      background-image: repeating-linear-gradient(#4c78dd, #1b39a8);
+    }
   }
   .btn-red {
     background-image: repeating-linear-gradient(#f3b96c, #c33326)
