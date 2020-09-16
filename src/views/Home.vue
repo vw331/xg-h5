@@ -16,7 +16,7 @@ export default {
   name: 'Home',
   data () {
     return {
-      count: parseInt(Math.random() * 10000)
+      count: 2000 + parseInt(Math.random() * 1000)
     }
   },
   mounted () {
